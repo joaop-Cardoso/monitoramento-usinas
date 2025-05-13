@@ -157,7 +157,7 @@ const config = {
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../../.env",
+    "rootEnvPath": null,
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../../../prisma",
@@ -175,8 +175,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Usina {\n  id         Int        @id @default(autoincrement())\n  nome       String\n  inversores Inversor[] // Relacionamento com Inversores\n}\n\nmodel Inversor {\n  id        Int        @id @default(autoincrement())\n  modelo    String\n  usinaId   Int // Chave estrangeira para Usina\n  usina     Usina      @relation(fields: [usinaId], references: [id])\n  checagens Checagem[]\n}\n\nmodel Checagem {\n  id                  Int      @id @default(autoincrement())\n  horario             DateTime\n  inversorId          Int\n  potencia_ativa_watt Float\n  temperatura_celsius Float\n  inversor            Inversor @relation(fields: [inversorId], references: [id])\n}\n",
-  "inlineSchemaHash": "83e9b28e0ecb68e4389c9ac0f7d9547662b53d40800d5b3aa4c15d38ed8fb7cd",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Usina {\n  id         Int        @id @default(autoincrement())\n  nome       String\n  inversores Inversor[] // Relacionamento com Inversores\n}\n\nmodel Inversor {\n  id        Int        @id @default(autoincrement())\n  modelo    String\n  usinaId   Int // Chave estrangeira para Usina\n  usina     Usina      @relation(fields: [usinaId], references: [id]) // Relacionamento com Usina\n  checagens Checagem[] // Relacionamento com Checagens\n}\n\nmodel Checagem {\n  id                  Int      @id @default(autoincrement())\n  horario             DateTime\n  inversorId          Int\n  potencia_ativa_watt Float\n  temperatura_celsius Float\n  inversor            Inversor @relation(fields: [inversorId], references: [id]) // Relacionamento com Inversor\n}\n",
+  "inlineSchemaHash": "06a1d150362df1051781fbe6fb85d78fb232e9fd2788f0a1291ab1316940cee9",
   "copyEngine": true
 }
 

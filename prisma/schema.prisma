@@ -18,8 +18,8 @@ model Inversor {
   id         Int        @id @default(autoincrement())
   modelo     String
   usinaId    Int       // Chave estrangeira para Usina
-  usina      Usina     @relation(fields: [usinaId], references: [id])
-  checagens  Checagem[]
+  usina      Usina     @relation(fields: [usinaId], references: [id]) // Relacionamento com Usina
+  checagens  Checagem[] // Relacionamento com Checagens
 }
 
 model Checagem {
@@ -28,5 +28,5 @@ model Checagem {
   inversorId          Int
   potencia_ativa_watt Float
   temperatura_celsius Float
-  inversor            Inversor  @relation(fields: [inversorId], references: [id])
+  inversor            Inversor  @relation(fields: [inversorId], references: [id]) // Relacionamento com Inversor
 }

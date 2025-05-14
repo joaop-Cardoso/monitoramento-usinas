@@ -16,7 +16,7 @@ export async function getUsinas() {
 }
 
 export async function getUsinaById(id: number) {
-  const exists = await prisma.usina.findUnique({ where: { id } });
+  const exists = await prisma.usina.findUnique({ where: { id }, include: { inversores: true }}, );
   if(!exists){
         const error = new Error(`Usina de id ${id} não encontrada.`);
     (error as any).status = 404;

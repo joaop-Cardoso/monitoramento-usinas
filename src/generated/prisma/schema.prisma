@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Usina {
+  id         Int        @id @default(autoincrement())
+  nome       String
+  inversores Inversor[] // Relacionamento com Inversores
+}
+
+model Inversor {
+  id        Int        @id @default(autoincrement())
+  nome      String
+  usinaId   Int // Chave estrangeira para Usina
+  usina     Usina      @relation(fields: [usinaId], references: [id]) // Relacionamento com Usina
+  checagens Checagem[] // Relacionamento com Checagens
+}
+
+model Checagem {
+  id                  Int      @id @default(autoincrement())
+  horario             DateTime
+  inversorId          Int
+  potencia_ativa_watt Float
+  temperatura_celsius Float
+  inversor            Inversor @relation(fields: [inversorId], references: [id]) // Relacionamento com Inversor
+}

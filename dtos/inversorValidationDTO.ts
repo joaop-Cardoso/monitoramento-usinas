@@ -1,7 +1,7 @@
 import { z } from 'zod'
 
 export const inversorSchema = z.object({
-  modelo: z.string().min(1).max(20),
+  nome: z.string().min(1).max(20),
   usinaId: z.number().int().positive()
 })
 

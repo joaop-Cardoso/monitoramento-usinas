@@ -2201,19 +2201,19 @@ export namespace Prisma {
 
   export type InversorMinAggregateOutputType = {
     id: number | null
-    modelo: string | null
+    nome: string | null
     usinaId: number | null
   }
 
   export type InversorMaxAggregateOutputType = {
     id: number | null
-    modelo: string | null
+    nome: string | null
     usinaId: number | null
   }
 
   export type InversorCountAggregateOutputType = {
     id: number
-    modelo: number
+    nome: number
     usinaId: number
     _all: number
   }
@@ -2231,19 +2231,19 @@ export namespace Prisma {
 
   export type InversorMinAggregateInputType = {
     id?: true
-    modelo?: true
+    nome?: true
     usinaId?: true
   }
 
   export type InversorMaxAggregateInputType = {
     id?: true
-    modelo?: true
+    nome?: true
     usinaId?: true
   }
 
   export type InversorCountAggregateInputType = {
     id?: true
-    modelo?: true
+    nome?: true
     usinaId?: true
     _all?: true
   }
@@ -2336,7 +2336,7 @@ export namespace Prisma {
 
   export type InversorGroupByOutputType = {
     id: number
-    modelo: string
+    nome: string
     usinaId: number
     _count: InversorCountAggregateOutputType | null
     _avg: InversorAvgAggregateOutputType | null
@@ -2361,7 +2361,7 @@ export namespace Prisma {
 
   export type InversorSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    modelo?: boolean
+    nome?: boolean
     usinaId?: boolean
     usina?: boolean | UsinaDefaultArgs<ExtArgs>
     checagens?: boolean | Inversor$checagensArgs<ExtArgs>
@@ -2370,25 +2370,25 @@ export namespace Prisma {
 
   export type InversorSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    modelo?: boolean
+    nome?: boolean
     usinaId?: boolean
     usina?: boolean | UsinaDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["inversor"]>
 
   export type InversorSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    modelo?: boolean
+    nome?: boolean
     usinaId?: boolean
     usina?: boolean | UsinaDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["inversor"]>
 
   export type InversorSelectScalar = {
     id?: boolean
-    modelo?: boolean
+    nome?: boolean
     usinaId?: boolean
   }
 
-  export type InversorOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "modelo" | "usinaId", ExtArgs["result"]["inversor"]>
+  export type InversorOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nome" | "usinaId", ExtArgs["result"]["inversor"]>
   export type InversorInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     usina?: boolean | UsinaDefaultArgs<ExtArgs>
     checagens?: boolean | Inversor$checagensArgs<ExtArgs>
@@ -2409,7 +2409,7 @@ export namespace Prisma {
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      modelo: string
+      nome: string
       usinaId: number
     }, ExtArgs["result"]["inversor"]>
     composites: {}
@@ -2837,7 +2837,7 @@ export namespace Prisma {
    */
   interface InversorFieldRefs {
     readonly id: FieldRef<"Inversor", 'Int'>
-    readonly modelo: FieldRef<"Inversor", 'String'>
+    readonly nome: FieldRef<"Inversor", 'String'>
     readonly usinaId: FieldRef<"Inversor", 'Int'>
   }
     
@@ -4405,7 +4405,7 @@ export namespace Prisma {
 
   export const InversorScalarFieldEnum: {
     id: 'id',
-    modelo: 'modelo',
+    nome: 'nome',
     usinaId: 'usinaId'
   };
 
@@ -4550,7 +4550,7 @@ export namespace Prisma {
     OR?: InversorWhereInput[]
     NOT?: InversorWhereInput | InversorWhereInput[]
     id?: IntFilter<"Inversor"> | number
-    modelo?: StringFilter<"Inversor"> | string
+    nome?: StringFilter<"Inversor"> | string
     usinaId?: IntFilter<"Inversor"> | number
     usina?: XOR<UsinaScalarRelationFilter, UsinaWhereInput>
     checagens?: ChecagemListRelationFilter
@@ -4558,7 +4558,7 @@ export namespace Prisma {
 
   export type InversorOrderByWithRelationInput = {
     id?: SortOrder
-    modelo?: SortOrder
+    nome?: SortOrder
     usinaId?: SortOrder
     usina?: UsinaOrderByWithRelationInput
     checagens?: ChecagemOrderByRelationAggregateInput
@@ -4569,7 +4569,7 @@ export namespace Prisma {
     AND?: InversorWhereInput | InversorWhereInput[]
     OR?: InversorWhereInput[]
     NOT?: InversorWhereInput | InversorWhereInput[]
-    modelo?: StringFilter<"Inversor"> | string
+    nome?: StringFilter<"Inversor"> | string
     usinaId?: IntFilter<"Inversor"> | number
     usina?: XOR<UsinaScalarRelationFilter, UsinaWhereInput>
     checagens?: ChecagemListRelationFilter
@@ -4577,7 +4577,7 @@ export namespace Prisma {
 
   export type InversorOrderByWithAggregationInput = {
     id?: SortOrder
-    modelo?: SortOrder
+    nome?: SortOrder
     usinaId?: SortOrder
     _count?: InversorCountOrderByAggregateInput
     _avg?: InversorAvgOrderByAggregateInput
@@ -4591,7 +4591,7 @@ export namespace Prisma {
     OR?: InversorScalarWhereWithAggregatesInput[]
     NOT?: InversorScalarWhereWithAggregatesInput | InversorScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Inversor"> | number
-    modelo?: StringWithAggregatesFilter<"Inversor"> | string
+    nome?: StringWithAggregatesFilter<"Inversor"> | string
     usinaId?: IntWithAggregatesFilter<"Inversor"> | number
   }
 
@@ -4689,44 +4689,44 @@ export namespace Prisma {
   }
 
   export type InversorCreateInput = {
-    modelo: string
+    nome: string
     usina: UsinaCreateNestedOneWithoutInversoresInput
     checagens?: ChecagemCreateNestedManyWithoutInversorInput
   }
 
   export type InversorUncheckedCreateInput = {
     id?: number
-    modelo: string
+    nome: string
     usinaId: number
     checagens?: ChecagemUncheckedCreateNestedManyWithoutInversorInput
   }
 
   export type InversorUpdateInput = {
-    modelo?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
     usina?: UsinaUpdateOneRequiredWithoutInversoresNestedInput
     checagens?: ChecagemUpdateManyWithoutInversorNestedInput
   }
 
   export type InversorUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    modelo?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
     usinaId?: IntFieldUpdateOperationsInput | number
     checagens?: ChecagemUncheckedUpdateManyWithoutInversorNestedInput
   }
 
   export type InversorCreateManyInput = {
     id?: number
-    modelo: string
+    nome: string
     usinaId: number
   }
 
   export type InversorUpdateManyMutationInput = {
-    modelo?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
   }
 
   export type InversorUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    modelo?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
     usinaId?: IntFieldUpdateOperationsInput | number
   }
 
@@ -4892,7 +4892,7 @@ export namespace Prisma {
 
   export type InversorCountOrderByAggregateInput = {
     id?: SortOrder
-    modelo?: SortOrder
+    nome?: SortOrder
     usinaId?: SortOrder
   }
 
@@ -4903,13 +4903,13 @@ export namespace Prisma {
 
   export type InversorMaxOrderByAggregateInput = {
     id?: SortOrder
-    modelo?: SortOrder
+    nome?: SortOrder
     usinaId?: SortOrder
   }
 
   export type InversorMinOrderByAggregateInput = {
     id?: SortOrder
-    modelo?: SortOrder
+    nome?: SortOrder
     usinaId?: SortOrder
   }
 
@@ -5260,13 +5260,13 @@ export namespace Prisma {
   }
 
   export type InversorCreateWithoutUsinaInput = {
-    modelo: string
+    nome: string
     checagens?: ChecagemCreateNestedManyWithoutInversorInput
   }
 
   export type InversorUncheckedCreateWithoutUsinaInput = {
     id?: number
-    modelo: string
+    nome: string
     checagens?: ChecagemUncheckedCreateNestedManyWithoutInversorInput
   }
 
@@ -5301,7 +5301,7 @@ export namespace Prisma {
     OR?: InversorScalarWhereInput[]
     NOT?: InversorScalarWhereInput | InversorScalarWhereInput[]
     id?: IntFilter<"Inversor"> | number
-    modelo?: StringFilter<"Inversor"> | string
+    nome?: StringFilter<"Inversor"> | string
     usinaId?: IntFilter<"Inversor"> | number
   }
 
@@ -5390,13 +5390,13 @@ export namespace Prisma {
   }
 
   export type InversorCreateWithoutChecagensInput = {
-    modelo: string
+    nome: string
     usina: UsinaCreateNestedOneWithoutInversoresInput
   }
 
   export type InversorUncheckedCreateWithoutChecagensInput = {
     id?: number
-    modelo: string
+    nome: string
     usinaId: number
   }
 
@@ -5417,35 +5417,35 @@ export namespace Prisma {
   }
 
   export type InversorUpdateWithoutChecagensInput = {
-    modelo?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
     usina?: UsinaUpdateOneRequiredWithoutInversoresNestedInput
   }
 
   export type InversorUncheckedUpdateWithoutChecagensInput = {
     id?: IntFieldUpdateOperationsInput | number
-    modelo?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
     usinaId?: IntFieldUpdateOperationsInput | number
   }
 
   export type InversorCreateManyUsinaInput = {
     id?: number
-    modelo: string
+    nome: string
   }
 
   export type InversorUpdateWithoutUsinaInput = {
-    modelo?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
     checagens?: ChecagemUpdateManyWithoutInversorNestedInput
   }
 
   export type InversorUncheckedUpdateWithoutUsinaInput = {
     id?: IntFieldUpdateOperationsInput | number
-    modelo?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
     checagens?: ChecagemUncheckedUpdateManyWithoutInversorNestedInput
   }
 
   export type InversorUncheckedUpdateManyWithoutUsinaInput = {
     id?: IntFieldUpdateOperationsInput | number
-    modelo?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
   }
 
   export type ChecagemCreateManyInversorInput = {

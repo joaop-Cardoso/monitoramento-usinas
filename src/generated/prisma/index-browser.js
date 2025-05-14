@@ -127,7 +127,7 @@ exports.Prisma.UsinaScalarFieldEnum = {
 
 exports.Prisma.InversorScalarFieldEnum = {
   id: 'id',
-  modelo: 'modelo',
+  nome: 'nome',
   usinaId: 'usinaId'
 };
 

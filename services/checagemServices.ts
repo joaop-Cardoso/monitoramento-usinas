@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { ChecagemDTO } from "../dtos/checagemValidationDTO";
+import { calcInvertersGeneration } from "../utils/calcularGeracaodeInversor";
 import prisma from "../lib/prisma";
 
 export async function createChecagens(data: ChecagemDTO | ChecagemDTO[]) {
@@ -135,5 +136,93 @@ export async function mediaTemperaturaDia(
   return {
     success: true,
     body: resultadoFormatado,
+  };
+}
+
+export async function geracaoTotalInversor(inversorId: number, dataInicio: string, dataFim: string) {
+  const inversor = await prisma.inversor.findUnique({
+    where: { id: inversorId },
+    include: {
+      checagens: {
+        where: {
+          horario: {
+            gte: new Date(`${dataInicio}T00:00:00.000Z`),
+            lte: new Date(`${dataFim}T23:59:59.999Z`)
+          }
+        },
+        orderBy: { horario: 'asc' }
+      }
+    }
+  });
+
+  if (!inversor) {
+    const error: any = new Error('Inversor não encontrado');
+    error.status = 404;
+    throw error;
+  }
+
+  const dados = [{
+    power: inversor.checagens.map(checagem => ({
+      value: checagem.potenciaAtivaWatt,
+      date: checagem.horario
+    }))
+  }];
+
+  const total = calcInvertersGeneration(dados);
+
+  return {
+    success: true,
+    body: {
+      inversorId,
+      dataInicio,
+      dataFim,
+      geracaoTotalWh: total
+    }
+  };
+}
+
+export async function geracaoTotalUsina(usinaId: number, dataInicio: string, dataFim: string) {
+  const usina = await prisma.usina.findUnique({
+    where: { id: usinaId },
+    include: {
+      inversores: {
+        include: {
+          checagens: {
+            where: {
+              horario: {
+                gte: new Date(`${dataInicio}T00:00:00.000Z`),
+                lte: new Date(`${dataFim}T23:59:59.999Z`)
+              }
+            },
+            orderBy: { horario: 'asc' }
+          }
+        }
+      }
+    }
+  });
+
+  if (!usina) {
+    const error: any = new Error('Usina não encontrada');
+    error.status = 404;
+    throw error;
+  }
+
+  const dados = usina.inversores.map(inversor => ({
+    power: inversor.checagens.map(checagem => ({
+      value: checagem.potenciaAtivaWatt,
+      date: checagem.horario
+    }))
+  }));
+
+  const total = calcInvertersGeneration(dados);
+
+  return {
+    success: true,
+    body: {
+      usinaId,
+      dataInicio,
+      dataFim,
+      geracaoTotalWh: total
+    }
   };
 }

@@ -23,10 +23,10 @@ model Inversor {
 }
 
 model Checagem {
-  id                  Int      @id @default(autoincrement())
-  horario             DateTime
-  inversorId          Int
-  potencia_ativa_watt Float
-  temperatura_celsius Float
-  inversor            Inversor @relation(fields: [inversorId], references: [id]) // Relacionamento com Inversor
+  id                 Int      @id @default(autoincrement())
+  horario            DateTime
+  inversorId         Int
+  potenciaAtivaWatt  Float
+  temperaturaCelsius Float
+  inversor           Inversor @relation(fields: [inversorId], references: [id]) // Relacionamento com Inversor
 }

@@ -25,6 +25,16 @@ export function tratarErro(error: any) {
     );
   }
 
+  if (error.status === 404) {
+    return NextResponse.json(
+      {
+        success: false,
+        message: error.message || "Recurso inexistente.",
+      },
+      { status: 404 }
+    );
+  }
+
   // Erro interno do servidor (500)
   console.error("Erro interno:", error);
   return NextResponse.json(

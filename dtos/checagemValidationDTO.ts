@@ -7,4 +7,9 @@ export const checagemSchema = z.object({
   inversorId: z.number().int().positive()
 })
 
+export const checagemArraySchema = z.union([
+  checagemSchema,
+  z.array(checagemSchema)
+]);
+
 export type ChecagemDTO = z.infer<typeof checagemSchema>;

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { tratarErro } from "../../../../utils/tratamentoErros";
-import { potenciaMaximaDia } from "../../../../services/checagemServices";
+import { potenciaMaximaDia } from "../../../../../services/checagemServices";
+import { tratarErro } from "../../../../../utils/tratamentoErros";
+
 
 export async function POST(request: NextRequest) {
     try {

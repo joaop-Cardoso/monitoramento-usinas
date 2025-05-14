@@ -135,8 +135,8 @@ exports.Prisma.ChecagemScalarFieldEnum = {
   id: 'id',
   horario: 'horario',
   inversorId: 'inversorId',
-  potencia_ativa_watt: 'potencia_ativa_watt',
-  temperatura_celsius: 'temperatura_celsius'
+  potenciaAtivaWatt: 'potenciaAtivaWatt',
+  temperaturaCelsius: 'temperaturaCelsius'
 };
 
 exports.Prisma.SortOrder = {

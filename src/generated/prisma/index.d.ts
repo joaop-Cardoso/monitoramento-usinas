@@ -3292,39 +3292,39 @@ export namespace Prisma {
   export type ChecagemAvgAggregateOutputType = {
     id: number | null
     inversorId: number | null
-    potencia_ativa_watt: number | null
-    temperatura_celsius: number | null
+    potenciaAtivaWatt: number | null
+    temperaturaCelsius: number | null
   }
 
   export type ChecagemSumAggregateOutputType = {
     id: number | null
     inversorId: number | null
-    potencia_ativa_watt: number | null
-    temperatura_celsius: number | null
+    potenciaAtivaWatt: number | null
+    temperaturaCelsius: number | null
   }
 
   export type ChecagemMinAggregateOutputType = {
     id: number | null
     horario: Date | null
     inversorId: number | null
-    potencia_ativa_watt: number | null
-    temperatura_celsius: number | null
+    potenciaAtivaWatt: number | null
+    temperaturaCelsius: number | null
   }
 
   export type ChecagemMaxAggregateOutputType = {
     id: number | null
     horario: Date | null
     inversorId: number | null
-    potencia_ativa_watt: number | null
-    temperatura_celsius: number | null
+    potenciaAtivaWatt: number | null
+    temperaturaCelsius: number | null
   }
 
   export type ChecagemCountAggregateOutputType = {
     id: number
     horario: number
     inversorId: number
-    potencia_ativa_watt: number
-    temperatura_celsius: number
+    potenciaAtivaWatt: number
+    temperaturaCelsius: number
     _all: number
   }
 
@@ -3332,39 +3332,39 @@ export namespace Prisma {
   export type ChecagemAvgAggregateInputType = {
     id?: true
     inversorId?: true
-    potencia_ativa_watt?: true
-    temperatura_celsius?: true
+    potenciaAtivaWatt?: true
+    temperaturaCelsius?: true
   }
 
   export type ChecagemSumAggregateInputType = {
     id?: true
     inversorId?: true
-    potencia_ativa_watt?: true
-    temperatura_celsius?: true
+    potenciaAtivaWatt?: true
+    temperaturaCelsius?: true
   }
 
   export type ChecagemMinAggregateInputType = {
     id?: true
     horario?: true
     inversorId?: true
-    potencia_ativa_watt?: true
-    temperatura_celsius?: true
+    potenciaAtivaWatt?: true
+    temperaturaCelsius?: true
   }
 
   export type ChecagemMaxAggregateInputType = {
     id?: true
     horario?: true
     inversorId?: true
-    potencia_ativa_watt?: true
-    temperatura_celsius?: true
+    potenciaAtivaWatt?: true
+    temperaturaCelsius?: true
   }
 
   export type ChecagemCountAggregateInputType = {
     id?: true
     horario?: true
     inversorId?: true
-    potencia_ativa_watt?: true
-    temperatura_celsius?: true
+    potenciaAtivaWatt?: true
+    temperaturaCelsius?: true
     _all?: true
   }
 
@@ -3458,8 +3458,8 @@ export namespace Prisma {
     id: number
     horario: Date
     inversorId: number
-    potencia_ativa_watt: number
-    temperatura_celsius: number
+    potenciaAtivaWatt: number
+    temperaturaCelsius: number
     _count: ChecagemCountAggregateOutputType | null
     _avg: ChecagemAvgAggregateOutputType | null
     _sum: ChecagemSumAggregateOutputType | null
@@ -3485,8 +3485,8 @@ export namespace Prisma {
     id?: boolean
     horario?: boolean
     inversorId?: boolean
-    potencia_ativa_watt?: boolean
-    temperatura_celsius?: boolean
+    potenciaAtivaWatt?: boolean
+    temperaturaCelsius?: boolean
     inversor?: boolean | InversorDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["checagem"]>
 
@@ -3494,8 +3494,8 @@ export namespace Prisma {
     id?: boolean
     horario?: boolean
     inversorId?: boolean
-    potencia_ativa_watt?: boolean
-    temperatura_celsius?: boolean
+    potenciaAtivaWatt?: boolean
+    temperaturaCelsius?: boolean
     inversor?: boolean | InversorDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["checagem"]>
 
@@ -3503,8 +3503,8 @@ export namespace Prisma {
     id?: boolean
     horario?: boolean
     inversorId?: boolean
-    potencia_ativa_watt?: boolean
-    temperatura_celsius?: boolean
+    potenciaAtivaWatt?: boolean
+    temperaturaCelsius?: boolean
     inversor?: boolean | InversorDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["checagem"]>
 
@@ -3512,11 +3512,11 @@ export namespace Prisma {
     id?: boolean
     horario?: boolean
     inversorId?: boolean
-    potencia_ativa_watt?: boolean
-    temperatura_celsius?: boolean
+    potenciaAtivaWatt?: boolean
+    temperaturaCelsius?: boolean
   }
 
-  export type ChecagemOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "horario" | "inversorId" | "potencia_ativa_watt" | "temperatura_celsius", ExtArgs["result"]["checagem"]>
+  export type ChecagemOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "horario" | "inversorId" | "potenciaAtivaWatt" | "temperaturaCelsius", ExtArgs["result"]["checagem"]>
   export type ChecagemInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     inversor?: boolean | InversorDefaultArgs<ExtArgs>
   }
@@ -3536,8 +3536,8 @@ export namespace Prisma {
       id: number
       horario: Date
       inversorId: number
-      potencia_ativa_watt: number
-      temperatura_celsius: number
+      potenciaAtivaWatt: number
+      temperaturaCelsius: number
     }, ExtArgs["result"]["checagem"]>
     composites: {}
   }
@@ -3965,8 +3965,8 @@ export namespace Prisma {
     readonly id: FieldRef<"Checagem", 'Int'>
     readonly horario: FieldRef<"Checagem", 'DateTime'>
     readonly inversorId: FieldRef<"Checagem", 'Int'>
-    readonly potencia_ativa_watt: FieldRef<"Checagem", 'Float'>
-    readonly temperatura_celsius: FieldRef<"Checagem", 'Float'>
+    readonly potenciaAtivaWatt: FieldRef<"Checagem", 'Float'>
+    readonly temperaturaCelsius: FieldRef<"Checagem", 'Float'>
   }
     
 
@@ -4416,8 +4416,8 @@ export namespace Prisma {
     id: 'id',
     horario: 'horario',
     inversorId: 'inversorId',
-    potencia_ativa_watt: 'potencia_ativa_watt',
-    temperatura_celsius: 'temperatura_celsius'
+    potenciaAtivaWatt: 'potenciaAtivaWatt',
+    temperaturaCelsius: 'temperaturaCelsius'
   };
 
   export type ChecagemScalarFieldEnum = (typeof ChecagemScalarFieldEnum)[keyof typeof ChecagemScalarFieldEnum]
@@ -4602,8 +4602,8 @@ export namespace Prisma {
     id?: IntFilter<"Checagem"> | number
     horario?: DateTimeFilter<"Checagem"> | Date | string
     inversorId?: IntFilter<"Checagem"> | number
-    potencia_ativa_watt?: FloatFilter<"Checagem"> | number
-    temperatura_celsius?: FloatFilter<"Checagem"> | number
+    potenciaAtivaWatt?: FloatFilter<"Checagem"> | number
+    temperaturaCelsius?: FloatFilter<"Checagem"> | number
     inversor?: XOR<InversorScalarRelationFilter, InversorWhereInput>
   }
 
@@ -4611,8 +4611,8 @@ export namespace Prisma {
     id?: SortOrder
     horario?: SortOrder
     inversorId?: SortOrder
-    potencia_ativa_watt?: SortOrder
-    temperatura_celsius?: SortOrder
+    potenciaAtivaWatt?: SortOrder
+    temperaturaCelsius?: SortOrder
     inversor?: InversorOrderByWithRelationInput
   }
 
@@ -4623,8 +4623,8 @@ export namespace Prisma {
     NOT?: ChecagemWhereInput | ChecagemWhereInput[]
     horario?: DateTimeFilter<"Checagem"> | Date | string
     inversorId?: IntFilter<"Checagem"> | number
-    potencia_ativa_watt?: FloatFilter<"Checagem"> | number
-    temperatura_celsius?: FloatFilter<"Checagem"> | number
+    potenciaAtivaWatt?: FloatFilter<"Checagem"> | number
+    temperaturaCelsius?: FloatFilter<"Checagem"> | number
     inversor?: XOR<InversorScalarRelationFilter, InversorWhereInput>
   }, "id">
 
@@ -4632,8 +4632,8 @@ export namespace Prisma {
     id?: SortOrder
     horario?: SortOrder
     inversorId?: SortOrder
-    potencia_ativa_watt?: SortOrder
-    temperatura_celsius?: SortOrder
+    potenciaAtivaWatt?: SortOrder
+    temperaturaCelsius?: SortOrder
     _count?: ChecagemCountOrderByAggregateInput
     _avg?: ChecagemAvgOrderByAggregateInput
     _max?: ChecagemMaxOrderByAggregateInput
@@ -4648,8 +4648,8 @@ export namespace Prisma {
     id?: IntWithAggregatesFilter<"Checagem"> | number
     horario?: DateTimeWithAggregatesFilter<"Checagem"> | Date | string
     inversorId?: IntWithAggregatesFilter<"Checagem"> | number
-    potencia_ativa_watt?: FloatWithAggregatesFilter<"Checagem"> | number
-    temperatura_celsius?: FloatWithAggregatesFilter<"Checagem"> | number
+    potenciaAtivaWatt?: FloatWithAggregatesFilter<"Checagem"> | number
+    temperaturaCelsius?: FloatWithAggregatesFilter<"Checagem"> | number
   }
 
   export type UsinaCreateInput = {
@@ -4732,8 +4732,8 @@ export namespace Prisma {
 
   export type ChecagemCreateInput = {
     horario: Date | string
-    potencia_ativa_watt: number
-    temperatura_celsius: number
+    potenciaAtivaWatt: number
+    temperaturaCelsius: number
     inversor: InversorCreateNestedOneWithoutChecagensInput
   }
 
@@ -4741,14 +4741,14 @@ export namespace Prisma {
     id?: number
     horario: Date | string
     inversorId: number
-    potencia_ativa_watt: number
-    temperatura_celsius: number
+    potenciaAtivaWatt: number
+    temperaturaCelsius: number
   }
 
   export type ChecagemUpdateInput = {
     horario?: DateTimeFieldUpdateOperationsInput | Date | string
-    potencia_ativa_watt?: FloatFieldUpdateOperationsInput | number
-    temperatura_celsius?: FloatFieldUpdateOperationsInput | number
+    potenciaAtivaWatt?: FloatFieldUpdateOperationsInput | number
+    temperaturaCelsius?: FloatFieldUpdateOperationsInput | number
     inversor?: InversorUpdateOneRequiredWithoutChecagensNestedInput
   }
 
@@ -4756,30 +4756,30 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     horario?: DateTimeFieldUpdateOperationsInput | Date | string
     inversorId?: IntFieldUpdateOperationsInput | number
-    potencia_ativa_watt?: FloatFieldUpdateOperationsInput | number
-    temperatura_celsius?: FloatFieldUpdateOperationsInput | number
+    potenciaAtivaWatt?: FloatFieldUpdateOperationsInput | number
+    temperaturaCelsius?: FloatFieldUpdateOperationsInput | number
   }
 
   export type ChecagemCreateManyInput = {
     id?: number
     horario: Date | string
     inversorId: number
-    potencia_ativa_watt: number
-    temperatura_celsius: number
+    potenciaAtivaWatt: number
+    temperaturaCelsius: number
   }
 
   export type ChecagemUpdateManyMutationInput = {
     horario?: DateTimeFieldUpdateOperationsInput | Date | string
-    potencia_ativa_watt?: FloatFieldUpdateOperationsInput | number
-    temperatura_celsius?: FloatFieldUpdateOperationsInput | number
+    potenciaAtivaWatt?: FloatFieldUpdateOperationsInput | number
+    temperaturaCelsius?: FloatFieldUpdateOperationsInput | number
   }
 
   export type ChecagemUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     horario?: DateTimeFieldUpdateOperationsInput | Date | string
     inversorId?: IntFieldUpdateOperationsInput | number
-    potencia_ativa_watt?: FloatFieldUpdateOperationsInput | number
-    temperatura_celsius?: FloatFieldUpdateOperationsInput | number
+    potenciaAtivaWatt?: FloatFieldUpdateOperationsInput | number
+    temperaturaCelsius?: FloatFieldUpdateOperationsInput | number
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -4949,38 +4949,38 @@ export namespace Prisma {
     id?: SortOrder
     horario?: SortOrder
     inversorId?: SortOrder
-    potencia_ativa_watt?: SortOrder
-    temperatura_celsius?: SortOrder
+    potenciaAtivaWatt?: SortOrder
+    temperaturaCelsius?: SortOrder
   }
 
   export type ChecagemAvgOrderByAggregateInput = {
     id?: SortOrder
     inversorId?: SortOrder
-    potencia_ativa_watt?: SortOrder
-    temperatura_celsius?: SortOrder
+    potenciaAtivaWatt?: SortOrder
+    temperaturaCelsius?: SortOrder
   }
 
   export type ChecagemMaxOrderByAggregateInput = {
     id?: SortOrder
     horario?: SortOrder
     inversorId?: SortOrder
-    potencia_ativa_watt?: SortOrder
-    temperatura_celsius?: SortOrder
+    potenciaAtivaWatt?: SortOrder
+    temperaturaCelsius?: SortOrder
   }
 
   export type ChecagemMinOrderByAggregateInput = {
     id?: SortOrder
     horario?: SortOrder
     inversorId?: SortOrder
-    potencia_ativa_watt?: SortOrder
-    temperatura_celsius?: SortOrder
+    potenciaAtivaWatt?: SortOrder
+    temperaturaCelsius?: SortOrder
   }
 
   export type ChecagemSumOrderByAggregateInput = {
     id?: SortOrder
     inversorId?: SortOrder
-    potencia_ativa_watt?: SortOrder
-    temperatura_celsius?: SortOrder
+    potenciaAtivaWatt?: SortOrder
+    temperaturaCelsius?: SortOrder
   }
 
   export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
@@ -5321,15 +5321,15 @@ export namespace Prisma {
 
   export type ChecagemCreateWithoutInversorInput = {
     horario: Date | string
-    potencia_ativa_watt: number
-    temperatura_celsius: number
+    potenciaAtivaWatt: number
+    temperaturaCelsius: number
   }
 
   export type ChecagemUncheckedCreateWithoutInversorInput = {
     id?: number
     horario: Date | string
-    potencia_ativa_watt: number
-    temperatura_celsius: number
+    potenciaAtivaWatt: number
+    temperaturaCelsius: number
   }
 
   export type ChecagemCreateOrConnectWithoutInversorInput = {
@@ -5385,8 +5385,8 @@ export namespace Prisma {
     id?: IntFilter<"Checagem"> | number
     horario?: DateTimeFilter<"Checagem"> | Date | string
     inversorId?: IntFilter<"Checagem"> | number
-    potencia_ativa_watt?: FloatFilter<"Checagem"> | number
-    temperatura_celsius?: FloatFilter<"Checagem"> | number
+    potenciaAtivaWatt?: FloatFilter<"Checagem"> | number
+    temperaturaCelsius?: FloatFilter<"Checagem"> | number
   }
 
   export type InversorCreateWithoutChecagensInput = {
@@ -5451,28 +5451,28 @@ export namespace Prisma {
   export type ChecagemCreateManyInversorInput = {
     id?: number
     horario: Date | string
-    potencia_ativa_watt: number
-    temperatura_celsius: number
+    potenciaAtivaWatt: number
+    temperaturaCelsius: number
   }
 
   export type ChecagemUpdateWithoutInversorInput = {
     horario?: DateTimeFieldUpdateOperationsInput | Date | string
-    potencia_ativa_watt?: FloatFieldUpdateOperationsInput | number
-    temperatura_celsius?: FloatFieldUpdateOperationsInput | number
+    potenciaAtivaWatt?: FloatFieldUpdateOperationsInput | number
+    temperaturaCelsius?: FloatFieldUpdateOperationsInput | number
   }
 
   export type ChecagemUncheckedUpdateWithoutInversorInput = {
     id?: IntFieldUpdateOperationsInput | number
     horario?: DateTimeFieldUpdateOperationsInput | Date | string
-    potencia_ativa_watt?: FloatFieldUpdateOperationsInput | number
-    temperatura_celsius?: FloatFieldUpdateOperationsInput | number
+    potenciaAtivaWatt?: FloatFieldUpdateOperationsInput | number
+    temperaturaCelsius?: FloatFieldUpdateOperationsInput | number
   }
 
   export type ChecagemUncheckedUpdateManyWithoutInversorInput = {
     id?: IntFieldUpdateOperationsInput | number
     horario?: DateTimeFieldUpdateOperationsInput | Date | string
-    potencia_ativa_watt?: FloatFieldUpdateOperationsInput | number
-    temperatura_celsius?: FloatFieldUpdateOperationsInput | number
+    potenciaAtivaWatt?: FloatFieldUpdateOperationsInput | number
+    temperaturaCelsius?: FloatFieldUpdateOperationsInput | number
   }
 
 

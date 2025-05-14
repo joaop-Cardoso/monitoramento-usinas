@@ -16,7 +16,7 @@ model Usina {
 
 model Inversor {
   id        Int        @id @default(autoincrement())
-  modelo    String
+  nome      String
   usinaId   Int // Chave estrangeira para Usina
   usina     Usina      @relation(fields: [usinaId], references: [id]) // Relacionamento com Usina
   checagens Checagem[] // Relacionamento com Checagens

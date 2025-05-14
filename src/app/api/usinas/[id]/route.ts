@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { usinaSchema } from "../../../../../dtos/usinaValidationDTO";
 import { tratarErro } from "../../../../../utils/tratamentoErros";
 import { getUsinaById, updateUsina, deleteUsina, getIdFromParams} from "../../../../../services/usinaServices"; 
-// , updateUsina, deleteUsina,
 
 export async function GET(request: NextRequest) {
   try {

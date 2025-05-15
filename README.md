@@ -1,38 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ API RESTful para Monitoramento de Usinas Fotovoltaicas
 
-## Getting Started
+Neste projeto, a API permite gerenciar usinas e inversores fotovoltaicos, registrar medições de potência e temperatura, e realizar cálculos de geração de energia, como potência máxima diária e geração por período. Segue padrão RESTful para facilitar a integração com sistemas de monitoramento.
 
-First, run the development server:
+---
+
+## 📌 1. Sobre o Projeto
+
+A API permite:
+
+- Cadastrar usinas e inversores
+- Registrar e recuperar checagens (medições de potência e temperatura)
+- Consultar dados de geração
+- Calcular potência máxima por dia
+- Calcular geração total por período
+
+---
+
+## 🚀 2. Tecnologias Utilizadas
+
+- **Next.js** – Framework para criação de rotas e APIs com Node.js.
+- **TypeScript** – Superset do JavaScript com tipagem estática.
+- **Prisma ORM** – ORM para modelagem e comunicação com o banco de dados PostgreSQL.
+- **Zod** – Validação e parsing de dados de entrada da API.
+- **PostgreSQL** – Banco de dados relacional, hospedado na Railway.
+- **Railway** – Plataforma para hospedagem e gerenciamento do banco.
+- **Postman** – Ferramenta usada para testar e documentar a API.
+
+---
+
+## 🛠️ 3. Instalação
+
+### 1-Clone o repositório em alguma pasta da sua máquina:
+
+```bash
+git clone https://github.com/joaop-Cardoso/monitoramento-usinas.git
+```
+
+### 2. Acesse a pasta do projeto:
+
+```bash
+cd monitoramento-usinas
+```
+
+### 3. (Opcional) Recomendado abrir o projeto no VS Code:
+
+```bash
+code .
+```
+
+### 4-Instale as dependências (pelo terminal do VS Code ou CMD):
+
+💡 Para abrir o terminal no VS Code, pressione Ctrl + ' (Control + crase) recomendo seguir por esse caminho.
+
+```bash
+npm install
+```
+
+### 5. Configure o banco de dados:
+
+Crie um arquivo .env na raiz do projeto com a variável DATABASE_URL apontando para o banco. Para fins de demonstração, deixei abaixo a URL de conexão do banco que hospedei na Railway:
+
+```bash
+DATABASE_URL="postgresql://postgres:ZYIeUnEYWzsFRZkFdnSKMQzmUcTLAubM@shortline.proxy.rlwy.net:23196/railway"
+```
+⚠️ Importante:
+Embora essa URL esteja pública aqui apenas para testes e demonstração do projeto, estou ciente que em aplicações reais isso não deve ser feito. 
+---
+
+## ▶️ 4. Utilização
+
+### Para iniciar o servidor localmente:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Para visualizar o banco de dados com o Prisma Studio:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npx prisma studio
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📄 5. Documentação da API
 
-To learn more about Next.js, take a look at the following resources:
+A documentação completa da API está disponível no Postman:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+👉 **[Acesse a documentação](https://documenter.getpostman.com/view/33533975/2sB2qUo5Vn)**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Recomendo utilizar o Postman para testar os endpoints enquanto o servidor estiver rodando.
+Você pode importar a coleção diretamente no seu Postman clicando no botão no canto superior direito da página da documentação.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧱 6. Estrutura do Projeto
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Projeto organizado com foco em clareza, separação de responsabilidades e agilidade no desenvolvimento.
 
-# monitoramento-usinas
+### 🗂️ Organização em Camadas
+
+```
+/api        → Rotas e requisições HTTP
+/service    → Lógica de negócio, funções e algoritmos
+/utils      → Funções utilitárias (tratamento de erros genéricos e cálculos)
+/dtos       → Schemas de validação com Zod
+/lib        → Instância do banco (Singleton)
+/generated  → Arquivos gerados pelo Prisma
+/prisma     → Migrations e definição das tabelas
+```
+---
+`
+## 📬 Considerações Finais
+
+Este projeto foi desenvolvido em poucos dias com foco em organização, clareza e uso de tecnologias modernas. Caso tenha interesse em discutir qualquer parte da implementação, estou à disposição.
+
+---
+
+## 📞 Contato
+
+- Linkedin: [Joãozim(eu)](https://www.linkedin.com/in/joaop-cardoso/)

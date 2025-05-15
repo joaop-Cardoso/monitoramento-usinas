@@ -30,7 +30,7 @@ A API permite:
 
 ## 🛠️ 3. Instalação
 
-### 1-Clone o repositório em alguma pasta da sua máquina:
+### 1. Clone o repositório em alguma pasta da sua máquina:
 
 ```bash
 git clone https://github.com/joaop-Cardoso/monitoramento-usinas.git
@@ -48,7 +48,7 @@ cd monitoramento-usinas
 code .
 ```
 
-### 4-Instale as dependências (pelo terminal do VS Code ou CMD):
+### 4. Instale as dependências (pelo terminal do VS Code ou CMD):
 
 💡 Para abrir o terminal no VS Code, pressione Ctrl + ' (Control + crase) recomendo seguir por esse caminho.
 

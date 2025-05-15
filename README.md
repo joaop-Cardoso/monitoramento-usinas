@@ -1,12 +1,12 @@
-# ⚡ API para Monitoramento de Usinas Fotovoltaicas
+# ⚡ API RESTful para Monitoramento de Usinas Fotovoltaicas
 
-Esta API permite gerenciar usinas e inversores fotovoltaicos, registrar medições de potência e temperatura, e realizar cálculos de geração de energia, como potência máxima diária e geração por período. Segue padrão RESTful para facilitar a integração com sistemas de monitoramento.
+Neste projeto, a API permite gerenciar usinas e inversores fotovoltaicos, registrar medições de potência e temperatura, e realizar cálculos de geração de energia, como potência máxima diária e geração por período. Segue padrão RESTful para facilitar a integração com sistemas de monitoramento.
 
 ---
 
 ## 📌 1. Sobre o Projeto
 
-Esta API permite:
+A API permite:
 
 - Cadastrar usinas e inversores
 - Registrar e recuperar checagens (medições de potência e temperatura)
@@ -120,5 +120,3 @@ Este projeto foi desenvolvido em poucos dias com foco em organização, clareza 
 ## 📞 Contato
 
 - Linkedin: [Joãozim(eu)](https://www.linkedin.com/in/joaop-cardoso/)
-  
-# monitoramento-usinas

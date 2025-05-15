@@ -109,6 +109,7 @@ Projeto organizado com foco em clareza, separação de responsabilidades e agili
 /lib        → Instância do banco (Singleton)
 /generated  → Arquivos gerados pelo Prisma
 /prisma     → Migrations e definição das tabelas
+/public     → Arquivo contendo dados de checagens de inversores para popular o banco
 ```
 ---
 `

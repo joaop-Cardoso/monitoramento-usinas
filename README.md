@@ -63,8 +63,9 @@ Crie um arquivo .env na raiz do projeto com a variável DATABASE_URL apontando p
 ```bash
 DATABASE_URL="postgresql://postgres:ZYIeUnEYWzsFRZkFdnSKMQzmUcTLAubM@shortline.proxy.rlwy.net:23196/railway"
 ```
-⚠️ Importante:
+⚠️ Importante ⚠️:
 Embora essa URL esteja pública aqui apenas para testes e demonstração do projeto, estou ciente que em aplicações reais isso não deve ser feito. 
+
 ---
 
 ## ▶️ 4. Utilização
